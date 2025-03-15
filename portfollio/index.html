@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: wheat;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: burlywood;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    header h1 {
+      color: rgb(59, 37, 9);
+      margin: 0;
+      font-size: 36px;
+    }
+
+    /* Navigation */
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+
+    nav a {
+      color: rgb(59, 37, 9);
+      text-decoration: none;
+      background-color: burlywood;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: rgb(59, 37, 9);
+      color: burlywood;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin: 10px 0;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background: burlywood;
+      border: none;
+      color: rgb(59, 37, 9);
+      cursor: pointer;
+      transition: background 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    .hero button:hover {
+      background: rgb(59, 37, 9);
+      color: burlywood;
+    }
+
+    /* Projects Section */
+    .projects {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .projects h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .project-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .project-container img {
+      width: 10%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid wheat;
+      transition: all ease-in-out 0.5s;
+    }
+
+    .project-container img:hover {
+      width: 25%;
+    }
+
+    /* About Section */
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: burlywood;
+      color: rgb(59, 37, 9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .about h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: burlywood;
+      color: rgb(59, 37, 9);
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>My Portfolio</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to My World</h2>
+      <p>I create amazing things with passion and creativity.</p>
+      <button>View My Work</button>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <img src="images/Flux_Schnell_A_futuristic_hightech_computer_screen_displaying__2.jpeg" alt="Project 1">
+      <img src="images/Flux_Schnell_A_futuristic_hightech_illustration_of_a_Pass_Gene_2.jpeg" alt="Project 2">
+      <img src="images/Flux_Schnell_Create_a_series_of_visually_stunning_illustration_2.jpeg" alt="Project 3">
+      <img src="images/Flux_Schnell_Create_a_visually_striking_template_design_for_a__0.jpeg" alt="Project 4">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm a passionate developer and designer with a love for creating beautiful and functional websites. I specialize in front-end development and enjoy turning ideas into reality.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
